@@ -1,24 +1,22 @@
-# README
+# PubsubNotifier Sandbox Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The sandbox for [pubsub_notifier](https://github.com/yhirano55/pubsub_notifier)
 
-Things you may want to cover:
+# Setup
 
-* Ruby version
+    $ bin/setup
 
-* System dependencies
+And Edit `.env`:
 
-* Configuration
+    SLACK_WEBHOOK_URL=
+    SLACK_DEFAULT_CHANNEL=
+    SLACK_DEFAULT_USERNAME=
+    SLACK_DEFAULT_ICON_EMOJI=
 
-* Database creation
+Then you can boot app server and worker:
 
-* Database initialization
+    $ bundle exec foreman start
 
-* How to run the test suite
+# Check Mailbox
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This app use letter_opener_web. You can check email inbox on `http://localhost:5000/letter_opener`
